@@ -31,7 +31,7 @@ contract VendingMachine is Ownable {
     // The StarkNet core contract.
     IStarknetCore starknetCore;
 
-    uint256 public constant PRICE = 0.001 ether;
+    uint256 public constant PRICE = 1;
     uint256 public l2Address;
 
     // The selector of the "mint" l1_handler.
@@ -59,8 +59,5 @@ contract VendingMachine is Ownable {
 
         // Send the message to the StarkNet core contract.
         starknetCore.sendMessageToL2(l2Address, MINT_SELECTOR, payload);
-
-        //send back the eth - this is just an experiment
-        payable(msg.sender).transfer(PRICE);
     }
 }
