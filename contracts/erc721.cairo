@@ -7,7 +7,7 @@ from starkware.cairo.common.math import assert_not_zero
 from starkware.cairo.common.bitwise import bitwise_or
 
 
-const L1_CONTRACT_ADDRESS = 0x0
+const L1_CONTRACT_ADDRESS = 0xD72dB7540dbEB1011A9b46F123Df5eb8A67c7cC8
 
 ## @title N-ERC721
 ## @description A minimalistic implementation of ERC721 Token Standard using only felts.
