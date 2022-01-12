@@ -54,8 +54,9 @@ contract VendingMachine is Ownable {
     ) external payable {
         require(msg.value == PRICE);
         // Construct the mint message's payload.
-        uint256[] memory payload = new uint256[](1);
+        uint256[] memory payload = new uint256[](2);
         payload[0] = user;
+        payload[1] = block.number;
 
         // Send the message to the StarkNet core contract.
         starknetCore.sendMessageToL2(l2Address, MINT_SELECTOR, payload);
