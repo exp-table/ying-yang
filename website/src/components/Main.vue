@@ -2,6 +2,9 @@
 </script>
 
 <template>
+  <div class="alert">
+    You need to have the ArgentX wallet installed as well as Metamask. It uses the Goerli network!
+  </div> 
   <div v-if="userL2Address">
     <p>Your Starknet address</p>
     <p>{{userL2Address}}</p>
@@ -130,4 +133,10 @@ export default {
 </script>
 
 <style scoped>
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
 </style>
