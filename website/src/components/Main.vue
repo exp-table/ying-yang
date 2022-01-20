@@ -38,7 +38,7 @@ import Web3Modal from "web3modal";
 
 import abi from '../assets/abi.json';
 
-const L2_CONTRACT_ADDRESS = "0x004b5d7d8f35f14d3fce9eabd7b24ee19f164c35cb3866288babb19ebc1cc9e3";
+const L2_CONTRACT_ADDRESS = "0x000af17e06ea9907051522a9db715563a504208fad1651aa9c850296f47a3624";
 
 export default {
   name: 'Main',
@@ -89,7 +89,7 @@ export default {
       this.signer = signer;
       this.userL1Address = address;
 
-      this.vendingMachine = new Contract("0xedAf31fa2fAbf5807824EE1377B17CA31Ea0Ea25", abi, signer);
+      this.vendingMachine = new Contract("0xa46AdF555Efe9A7F69C1e1ee33BEeEb68dE17dd2", abi, signer);
     },
 
     async pay() {

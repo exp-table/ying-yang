@@ -7,7 +7,7 @@ from starkware.cairo.common.math import assert_not_zero
 from starkware.cairo.common.bitwise import bitwise_or
 
 
-const L1_CONTRACT_ADDRESS = 0xedAf31fa2fAbf5807824EE1377B17CA31Ea0Ea25
+const L1_CONTRACT_ADDRESS = 0xa46AdF555Efe9A7F69C1e1ee33BEeEb68dE17dd2
 
 ## @title N-ERC721
 ## @description A minimalistic implementation of ERC721 Token Standard using only felts.
@@ -214,8 +214,7 @@ func mint{
     range_check_ptr
 }(
     from_address : felt,
-    to: felt,
-    salt: felt
+    to: felt
 ):
     # Make sure the message was sent by the intended L1 contract.
     assert from_address = L1_CONTRACT_ADDRESS

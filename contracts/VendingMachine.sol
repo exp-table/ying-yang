@@ -16,15 +16,6 @@ interface IStarknetCore {
         uint256 selector,
         uint256[] calldata payload
     ) external returns (bytes32);
-
-    /**
-      Consumes a message that was sent from an L2 contract.
-
-      Returns the hash of the message.
-    */
-    function consumeMessageFromL2(uint256 fromAddress, uint256[] calldata payload)
-        external
-        returns (bytes32);
 }
 
 contract VendingMachine is Ownable {
@@ -54,9 +45,8 @@ contract VendingMachine is Ownable {
     ) external payable {
         require(msg.value == PRICE);
         // Construct the mint message's payload.
-        uint256[] memory payload = new uint256[](2);
+        uint256[] memory payload = new uint256[](1);
         payload[0] = user;
-        payload[1] = block.number;
 
         // Send the message to the StarkNet core contract.
         starknetCore.sendMessageToL2(l2Address, MINT_SELECTOR, payload);

@@ -10,11 +10,11 @@ A simple contract that accepts eth as payment (and refunds it of course, since i
 
 If you are wondering why the recipient is a `uint256` type and not `address`, it's because we expect users to be represented by smart-contracts on Starknet.
 
-You can interact with the contract [here](https://goerli.etherscan.io/address/0xedAf31fa2fAbf5807824EE1377B17CA31Ea0Ea25).
+You can interact with the contract [here](https://goerli.etherscan.io/address/0xa46AdF555Efe9A7F69C1e1ee33BEeEb68dE17dd2).
 
 It expects a 0.001 eth payment everytime you mint.
 
 ## Minting on Starknet
 The contract is the standard `ERC721`, with just the `totalSupply` function taken from `ERC721Enumerable`.
 
-You can interact with the contract [here](https://goerli.voyager.online/contract/0x004b5d7d8f35f14d3fce9eabd7b24ee19f164c35cb3866288babb19ebc1cc9e3#readContract).
+You can interact with the contract [here](https://goerli.voyager.online/contract/0x000af17e06ea9907051522a9db715563a504208fad1651aa9c850296f47a3624#readContract).
